@@ -13,6 +13,7 @@ def cities():
   # Only respond if the passed-in method matched 'GET'.
   if request.method == 'GET':
     cities = getCities()
+    return jsonify(items = cities)
     print(jsonify(items = cities))
 
 # Run the server.
